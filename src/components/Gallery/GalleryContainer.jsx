@@ -1,22 +1,21 @@
 import React from "react";
-import { getAllPhotos } from "../../api/api";
+import { connect } from "react-redux";
+import { getAllPhotosThunkCreator } from "../../redux/galleryReducer";
 import Gallery from "./Gallery"
 
 class GalleryContainer extends React.Component {
 
     componentDidMount() {
-        getAllPhotos()
-        .then(response => {
-            debugger;
-        },
-        error => {
-            debugger
-        })
+        this.props.getAllPhotosThunkCreator();
     }
 
     render() {
-        return <Gallery />;
+        return <Gallery photos = {this.props.photos}/>;
     }
+
 }
 
-export default GalleryContainer;
+
+export default connect((state) => ({
+    ...state.gallery,
+}), {getAllPhotosThunkCreator})(GalleryContainer);

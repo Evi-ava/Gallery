@@ -1,10 +1,19 @@
 import axios from "axios";
 
-export const getAllPhotos = () => {
-    return axios.get("http://gallery.dev.webant.ru/api/clients", {
-        headers: {
-            accept: 'application/json',
-            // Authorization: "Bearer 123",
-        }
-    });
-}
+const instance = axios.create({
+    baseURL: 'http://gallery.dev.webant.ru/',
+    accept: 'application/json',
+});
+
+export const galleryAPI = {
+    getPhotos(page, limit) {
+        return instance.get("api/photos?", {
+            params: {
+                page,
+                limit,
+            }
+        })
+        .then(response => response.data);
+    }
+} 
+

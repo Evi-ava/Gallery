@@ -1,14 +1,12 @@
 import s from "./Gallery.module.css";
-
+import Block from "./Block/Block";
 const Gallery = (props) => {
+    
+    const blockElements = props.photos.map(photo => <Block key = {photo.id} image = {photo.image}/>);
 
     return (
         <div className={s.gallery}>
-            <div className={s.block}>1</div>
-            <div className={s.block}>2</div>
-            <div className={s.block}>3</div>
-            <div className={s.block}>4</div>
-            <div className={s.block}>5</div> 
+            {blockElements}
         </div>
     );
 }
