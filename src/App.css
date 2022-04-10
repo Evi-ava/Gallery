@@ -3,3 +3,12 @@
   padding: 0;
 }
 
+.pagination {
+  margin: 20px auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.ant-pagination-options {
+  display: none;
+}

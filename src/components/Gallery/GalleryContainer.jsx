@@ -12,7 +12,6 @@ class GalleryContainer extends React.Component {
     render() {
         return <Gallery photos = {this.props.photos}/>;
     }
-
 }
 
 

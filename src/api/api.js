@@ -6,7 +6,7 @@ const instance = axios.create({
 });
 
 export const galleryAPI = {
-    getPhotos(page, limit) {
+    getPhotos(page = 1, limit = 15) {
         return instance.get("api/photos?", {
             params: {
                 page,

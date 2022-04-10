@@ -1,8 +1,11 @@
 import { galleryAPI } from "../api/api";
 
 const SET_PHOTOS = 'SET_PHOTOS';
+const SET_COUNT_PAGES = 'SET_COUNT_PAGES';
 
 const initialState = {
+    countPages: 0,
+    limit: 10, 
     photos: [],
 };
 
@@ -14,6 +17,12 @@ const galleryReducer = (state = initialState, action) => {
                 photos: action.photos,
             }
         }
+        case SET_COUNT_PAGES: {
+            return {
+                ...state, 
+                countPages: action.countPages,
+            }
+        }
         default: 
             return state;
     }
@@ -22,10 +31,15 @@ const galleryReducer = (state = initialState, action) => {
 export default galleryReducer;
 
 export const setPhotos = (photos) => ({type : SET_PHOTOS, photos});
+export const setCountPhotos = (countPages) => ({type: SET_COUNT_PAGES, countPages});
 
-export const getAllPhotosThunkCreator = () => (dispatch) => {
-    galleryAPI.getPhotos(8, 15)
-    .then(response => {
-        dispatch(setPhotos(response.data));
-    })
+export const getAllPhotosThunkCreator = (page, limit) => {
+    return (dispatch) => {
+        galleryAPI.getPhotos(page, limit)
+        .then(response => {
+            dispatch(setPhotos(response.data));
+            dispatch(setCountPhotos(response.countOfPages));
+        })
+    }
 }
+
