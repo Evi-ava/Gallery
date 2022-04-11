@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getAllPhotosThunkCreator } from "../../redux/galleryReducer";
-import Preloader from "../Preloader/Preloader";
+import Gallery from "./Gallery";
+import Preloader from "../Preloader/Preloader"
 
 class GalleryContainer extends React.Component {
 
@@ -10,7 +11,8 @@ class GalleryContainer extends React.Component {
     }
 
     render() {
-        return <Preloader />
+        if(this.props.loading) return <Preloader />
+        else return <Gallery photos = {this.props.photos}/>;
     }
 }
 
