@@ -6,7 +6,7 @@ const Preloader = (props) => {
         <div className={s.preloader}>
             <div className="preloaderContent">
                 <img src={preloader} alt="preloader" />
-                <span>Loading...</span>
+                <span className={s.subscribe}>Loading...</span>
             </div>
         </div>
     );

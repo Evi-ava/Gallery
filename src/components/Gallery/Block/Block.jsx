@@ -1,5 +1,4 @@
 import s from './Block.module.css';
-import { NavLink } from "react-router-dom";
 
 const Block = (props) => {
     return (

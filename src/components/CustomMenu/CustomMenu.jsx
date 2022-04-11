@@ -8,8 +8,6 @@ const { SubMenu } = Menu;
 class CustomMenu extends React.Component {
 
       handleClick = (e) => {
-        console.log('click ', e);
-        debugger
         this.props.setOrder(e.key);
       };
     

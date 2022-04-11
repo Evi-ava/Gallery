@@ -3,8 +3,32 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "SF"; 
+  font-weight: 500;
+  src: url("./assets/fonts/SF-Medium.otf"); 
+}
+
+@font-face {
+  font-family: "Acrom"; 
+  font-weight: 400;
+  src: url("./assets/fonts/Acrom-Regular.ttf"); 
+}
+
 :root {
   --pink: #ED5992;
+}
+
+.ant-pagination-item {
+  font-size: 14px;
+  font-family: "SF";
+  font-weight: 500;
+}
+
+.ant-menu-item { 
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Acrom" ;
 }
 
 .ant-pagination-item-active {

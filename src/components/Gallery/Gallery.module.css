@@ -3,6 +3,5 @@
    grid-template-columns: repeat(5,  249px);
    grid-template-rows: repeat(3, 187px);
    grid-auto-rows: 187px;
-   
    gap: 24px;
 }

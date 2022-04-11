@@ -16,4 +16,3 @@ class PaginationContainer extends React.Component {
 
 export default connect((state) => ({...state.gallery}), {getAllPhotosThunkCreator})(PaginationContainer);
 
-// export default connect((state) => ({}), {getAllPhotosThunkCreator})(PaginationContainer);

@@ -1,7 +1,6 @@
-import logo from "../../assets/image/logo.svg"
-import CustomMenu from "../CustomMenu/CustomMenu"
+import logo from "../../assets/image/logo.svg";
 import CustomMenuContainer from "../CustomMenu/CustomMenuContainer";
-import s from "./Header.module.css"
+import s from "./Header.module.css";
 
 const Header = (props) => {
     return (
