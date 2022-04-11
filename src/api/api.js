@@ -44,11 +44,13 @@ window.instance = instance;
 // authorization();
 
 export const galleryAPI = {
-    getPhotos(page = 1, limit = 15) {
+    getPhotos(page = 1, limit = 15, fresh = true, popular = null) {
         return instance.get("api/photos?", {
             params: {
                 page,
                 limit,
+                'new': fresh,
+                popular,
             }
         })
         .then(response => response.data);

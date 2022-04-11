@@ -33,7 +33,7 @@ export default galleryReducer;
 export const setPhotos = (photos) => ({type : SET_PHOTOS, photos});
 export const setCountPhotos = (countPages) => ({type: SET_COUNT_PAGES, countPages});
 
-export const getAllPhotosThunkCreator = (page, limit) => {
+export const getAllPhotosThunkCreator = (page, limit, fresh, popular) => {
     return (dispatch) => {
         galleryAPI.getPhotos(page, limit)
         .then(response => {

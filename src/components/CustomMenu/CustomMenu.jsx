@@ -14,13 +14,14 @@ class CustomMenu extends React.Component {
       handleClick = e => {
         console.log('click ', e);
         this.setState({ current: e.key });
+        this.props.setOrder(e.key);
       };
     
       render() {
         const { current } = this.state;
         return (
           <Menu onClick={this.handleClick} selectedKeys={[current]} mode="horizontal">
-            <Menu.Item class="item" key="new" >
+            <Menu.Item key="new" >
               New
             </Menu.Item>
             <Menu.Item key="popular">
