@@ -10,8 +10,6 @@ class PaginationContainer extends React.Component {
     }
 
     render() {
-        console.log("pagination defCurrent = " + this.props.currentPage)
-        debugger
         return  <Pagination onChange = {this.onChange}  defaultCurrent={1} current={this.props.currentPage} className='pagination' pageSize={1} total={this.props.countPages} />
     }
 }

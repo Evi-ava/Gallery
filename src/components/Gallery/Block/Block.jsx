@@ -1,10 +1,14 @@
 import s from './Block.module.css';
+import { NavLink } from "react-router-dom";
 
 const Block = (props) => {
     return (
-        <div className={s.block}>
-            <img className={s.img} src={`http://gallery.dev.webant.ru/media/${props.image.name}`} alt="img" />
-        </div>
+        
+            <div className={s.block}>
+                <img className={s.img + " " + "image"} src={`http://gallery.dev.webant.ru/media/${props.image.name}`} alt="img" />
+            </div>
+        
+
     );
 }
 
