@@ -5,11 +5,11 @@ import { connect } from "react-redux";
 class CustomMenuContainer extends React.Component {
 
     setOrder = (menuItem) => {
-        this.props.getAllPhotosThunkCreator();
+        this.props.getAllPhotosThunkCreator(1, this.props.limit, menuItem);
     }
 
     render() { 
-        return <CustomMenu setOrder={this.setOrder} />;
+        return <CustomMenu setOrder={this.setOrder} currentItemMenu ={this.props.currentItemMenu} />;
     }
 }
 

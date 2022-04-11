@@ -7,20 +7,21 @@ import {  Menu  } from "antd";
 const { SubMenu } = Menu;
 
 class CustomMenu extends React.Component {
-    state = {
-        current: 'new',
-      };
+    // state = {
+    //     current: 'new',
+    //   };
     
       handleClick = e => {
+          debugger
         console.log('click ', e);
-        this.setState({ current: e.key });
+        // this.setState({ current: e.key });
         this.props.setOrder(e.key);
       };
     
       render() {
-        const { current } = this.state;
+        // const { current } = this.state;setOrder
         return (
-          <Menu onClick={this.handleClick} selectedKeys={[current]} mode="horizontal">
+          <Menu onClick={this.handleClick} selectedKeys={[this.props.currentItemMenu]} mode="horizontal">
             <Menu.Item key="new" >
               New
             </Menu.Item>

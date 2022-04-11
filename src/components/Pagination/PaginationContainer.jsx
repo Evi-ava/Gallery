@@ -7,11 +7,11 @@ class PaginationContainer extends React.Component {
 
     onChange = (page) => {
         debugger
-        this.props.getAllPhotosThunkCreator(page, 15);
+        this.props.getAllPhotosThunkCreator(page, this.props.limit);
     }
 
     render() {
-        return  <Pagination onChange = {this.onChange} className='pagination' pageSize={1} total={this.props.countPages} />
+        return  <Pagination onChange = {this.onChange}  defaultCurrent={this.props.currentPage} className='pagination' pageSize={1} total={this.props.countPages} />
     }
 }
 

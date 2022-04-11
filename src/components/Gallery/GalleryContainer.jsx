@@ -6,7 +6,7 @@ import Gallery from "./Gallery"
 class GalleryContainer extends React.Component {
 
     componentDidMount() {
-        this.props.getAllPhotosThunkCreator();
+        this.props.getAllPhotosThunkCreator(this.props.currentPage, this.props.limit, this.props.currentItemMenu);
     }
 
     render() {
