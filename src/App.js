@@ -5,7 +5,6 @@ import { store } from './redux/store';
 import { Provider } from 'react-redux';
 import 'antd/dist/antd.css'; 
 import './App.css';
-import PaginationContainer from './components/Pagination/PaginationContainer';
 
 function App() {
   return (

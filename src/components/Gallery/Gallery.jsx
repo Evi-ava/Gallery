@@ -7,10 +7,12 @@ const Gallery = (props) => {
 
     return (
         <div>
-            <div className={s.gallery}>
-                {blockElements}
+            <div className="container">
+                <div className={s.gallery}>
+                    {blockElements}
+                </div>
+                <PaginationContainer />
             </div>
-            <PaginationContainer />
         </div>
 
     );
