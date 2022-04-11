@@ -6,12 +6,13 @@ import { connect } from "react-redux";
 class PaginationContainer extends React.Component {
 
     onChange = (page) => {
-        debugger
-        this.props.getAllPhotosThunkCreator(page, this.props.limit);
+        this.props.getAllPhotosThunkCreator(page, this.props.limit, this.props.currentItemMenu);
     }
 
     render() {
-        return  <Pagination onChange = {this.onChange}  defaultCurrent={this.props.currentPage} className='pagination' pageSize={1} total={this.props.countPages} />
+        console.log("pagination defCurrent = " + this.props.currentPage)
+        debugger
+        return  <Pagination onChange = {this.onChange}  defaultCurrent={1} current={this.props.currentPage} className='pagination' pageSize={1} total={this.props.countPages} />
     }
 }
 

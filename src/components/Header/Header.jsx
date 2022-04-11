@@ -1,5 +1,6 @@
 import logo from "../../assets/image/logo.svg"
 import CustomMenu from "../CustomMenu/CustomMenu"
+import CustomMenuContainer from "../CustomMenu/CustomMenuContainer";
 import s from "./Header.module.css"
 
 const Header = (props) => {
@@ -9,7 +10,7 @@ const Header = (props) => {
                 <div className={s.logo}>
                     <img src={logo} alt="logo" />
                 </div>
-                <CustomMenu />
+                <CustomMenuContainer />
             </div>
         </div>
     );
